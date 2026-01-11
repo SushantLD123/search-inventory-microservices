@@ -22,7 +22,7 @@ public class SearchService {
     public List<String> cheapProducts() {
 
         ProductDTO[] products = webClient.get()
-                .uri("http://localhost:8181/products")
+                .uri("http://localhost:8080/products")
                 .retrieve()
                 .bodyToMono(ProductDTO[].class)
                 .block();
